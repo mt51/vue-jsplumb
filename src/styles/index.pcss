@@ -1,0 +1,99 @@
+html, body, #app{
+  width: 100%;
+  height: 100%;
+}
+.jtk-demo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.node-list {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid #ccc;
+}
+.main-container {
+  flex: 1;
+  box-sizing: border-box;
+  height: 100%;
+  border: 1px solid #000;
+}
+.jtk-node {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  border: 1px solid #346789;
+  text-align: center;
+  z-index: 24;
+  cursor: pointer;
+  box-shadow: 2px 2px 19px #aaa;
+  color: black;
+  transition: box-shadow 0.15s ease-in;
+  &:hover {
+    border:1px solid #123456;
+    box-shadow: 2px 2px 19px #444;
+    opacity:0.9;
+  }
+}
+.jtk-node-start,.jtk-node-end{
+  top: 20px;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+}
+.jtk-node-condition {
+  top: 120px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  transform: rotate(45deg);
+  & span {
+    display: inline-block;
+    transform: rotate(-45deg);
+  }
+}
+.jtk-node-work {
+  top: 260px;
+  width: 120px;
+  height: 45px;
+  line-height: 45px;
+}
+.jtk-node-end {
+  top: 340px;
+}
+.save-info {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.target-endpoint-condition-Top.jtk-droppable {
+  margin-top: -14px!important;
+}
+.source-endpoint-condition-Right.jtk-droppable {
+  margin-left: 14px!important;
+}
+.target-endpoint-condition-Bottom.jtk-droppable {
+  margin-top: 14px!important;
+}
+.source-endpoint-condition-Left.jtk-droppable {
+  margin-left: -14px!important;
+}
+.rs-conn-label {
+  background: #fff;
+  cursor: pointer;
+}
+.jtk-endpoint {
+  z-index: 999;
+}
+.jtk-node-delete {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
